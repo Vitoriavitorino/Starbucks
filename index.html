@@ -4,79 +4,86 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Starbucks 2.0 (Resposivo)</title>
-    
-    <!--Link favicon-->
+    <title>Starbucks (Landing page)</title>
+
+    <!-- Link para Favicon -->
     <link rel="shortcut icon" href="assets/starbucks-favicon.png" type="image/x-icon">
-    
-    <!--Link CSS-->
+
+    <!-- Link para o Css -->
     <link rel="stylesheet" href="estilo.css">
-   
+
 </head>
 <body>
-    <!--________________________________________________________________________________________--->
-    <!--Header-->
 
-    <!--Div para círculo-->
-    <div class="circulo"></div>
+    <!-- Container com toda a página -->
+    <main>
+        <!-- Div para o círculo colorido -->
+        <div class="circulo"></div>
 
-    <!--Header-->
-    <header>
-        <!--Imagem logo-->
-        <a href="#"><img src="assets/logo.png" alt="logo" class="logo"></a>
+        <!-- Header -->
+        <header>
+            <!-- Logo -->
+            <a href="#"><img src="assets/logo.png" alt="logo" class="logo"></a>
 
-        <!--Div para menu hamburguer (Em telas menores)-->
+            <!-- Div para menu hamburguer (Em telas menores) -->
+            <div class="toggle" onclick="toggleMenu();"></div>
 
-        <!--Menu (Links)-->
-        <ul class="Links">
-            <li><a href="https://www.Starbucks.com.br/" target="_blank">Home</a></li>
-            <li><a href="https://www.Starbucks.com.br/menu-list" target="_blank">menu</a></li>
-            <li><a href="https://www.Starbucks.com.br/responsabilidade" target="_blank">novidades</a></li>
-            <li><a href="https://www.Starbucks.com.br/lojas" target="_blank">lojas</a></li>
+            <!-- Menu (Links) -->
+            <ul class="links">
+                <li><a href="https://www.starbucks.com.br/" target="_blank">Home</a></li>
+                <li><a href="https://www.starbucks.com.br/menu-list" target="_blank">Menu</a></li>
+                <li><a href="https://www.starbucks.com.br/responsabilidade" target="_blank">Novidades</a></li>
+                <li><a href="https://www.starbucks.com.br/lojas" target="_blank">Lojas</a></li>
+            </ul>
 
-        </ul>
-    </header>
+        </header>
 
-    <!--___________________________________________________________________________________________________________-->
-    <!--Conteúdo-->
+        <!-- ___________________________________________ -->
+        <!-- Conteudo -->
 
-    <div class="conteudo">
-        <div class="textoPrincipal">
+        <div class="conteudo">
 
-            <!--Texto principal-->
-            <h2> Não é apenas um café é: <br> <span> Starbucks</span></h2>
+            <div class="textoPrincipal">
 
-            <!--Texto secundário-->
-            <p> Descubra um mundo de sabores inesquecíveis com a Starbucks. Cada colherada é uma exploração de sabores irresistíveis que vão te conquistar! </p>
+                <!-- Texto principal -->
+                <h2>Não é apenas um café é:<br> <span>Starbucks</span></h2>
 
-            <!--Botão-->
-            <a href="https://www.Starbucks.com.br/" target="_blank">Veja mais</a>
+                <!-- Texto secundário -->
+                <p>Descubra um mundo de sabores inesquecíveis com a Starbucks.
+                    Cada colherada é uma explosão de sabores irresistíveis que
+                    vão te conquistar!
+                </p>
+
+                <!-- Botão -->
+                <a href="https://www.starbucks.com.br/" target="_blank">Veja mais</a>
+
+                
+            </div>
+
+            <!-- Imagem Sorvete grande (a direita) -->
+            <div class="imgBox"><img src="assets/img1.png" class="starbucks"/></div>
 
         </div>
-        <!--Imagem do sorvete grande (a direito)-->
-        <div class="imgBox"><img src="assets/img1.png" class="Starbucks"/></div>
 
-    </div>
-      
-    <!--Imagem do sorvete grande (abaixo)-->
-    <ul class="sorvetes">
-        <li><img src="assets/thumb1.png" onclick="imgSlide('assets/img1.png');changeCircleColor ('#017143')"></li>
-        <li><img src="assets/thumb2.png" onclick="imgSlide('assets/img1.png');changeCircleColor ('#017143')"></li>
-        <li><img src="assets/thumb3.png" onclick="imgSlide('assets/img1.png');changeCircleColor ('#017143')"></li>
-     </ul>
+        <!-- Imagens dos sorvetes pequenos (abaixo)-->
+        <ul class="sorvetes">
+            <li><img src="assets/thumb1.png" onclick="imgSlider('assets/img1.png');changeCircleColor('#017143')"></li>
+            <li><img src="assets/thumb2.png" onclick="imgSlider('assets/img2.png');changeCircleColor('#eb7495')"></li>
+            <li><img src="assets/thumb3.png" onclick="imgSlider('assets/img3.png');changeCircleColor('#d752b1')"></li>
+        </ul>
 
-     <ul class="sociais">
-        <li><a href="https://pt-br.facebook.com/" target="_blank"><img src="assets/facebook.png" alt="facebook"></a>"</li>
-        <li><a href="https://twitter.com/" target="_blank"><img src="assets/twitter.png" alt="twitter"></a></li>
-        <li><a href="https://www.instagram.com/" target="_blank"><img src="assets/instagram.png" alt="instagram"></a></li>
-     </ul>
+        <!-- Redes sociais -->
 
+        <ul class="sociais">
+            <li><a href="https://pt-br.facebook.com/" target="_blank"><img src="assets/facebook.png" alt="facebook"></a></li>
+            <li><a href="https://twitter.com/" target="_blank"><img src="assets/twitter.png" alt="twitter"></a></li>
+            <li><a href="https://www.instagram.com" target="_blank"><img src="assets/instagram.png" alt="instagram"></a></li>
+        </ul>
 
     </main>
 
-    <!--Link para JavaScript-->
+    <!-- Link para JS -->
     <script src="mudar.js"></script>
-
-        
+    
 </body>
 </html>
