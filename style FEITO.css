@@ -1,0 +1,236 @@
+/* importando a font Pooppins */
+
+@import url('https://fonts.googlepis.com/css2?family=Pooppins:wght@300;400;500;600;700;800;900&display=swap');
+
+/*_______________________________________________________________________*/
+/*Reset (básico) */
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  /* Variáveis no CSS */
+
+  --corPrimaria: #017143; /* Desclaração de variável */
+  /* color: var(--corPrimaria); Chamada da variável */
+
+  --corSecundaria:#333; /* Declaração de variável */
+   /* color: var(--corSecundaria); Chamada da variável */
+
+   --corTerciaria: #fff; /* Declaração de variável */
+   /* color: var(--corTerciaria); Chamada da variável */
+}
+
+/*_____________________________________________________________________*/
+/*Container (Geral página) */
+main{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /*background-color:#fff; */
+  background-color: var(--corTerciaria);
+}
+
+/*______________________________________________________________________________________*/
+/* Header ( Cabeçalho)*/
+
+header{
+  position: absolute;
+  top: 0;
+  left: 100%;
+  padding: 20px 100px; /* o padding de 100px que determina o respeiro lateral */
+  display: flex; /*Flexbox para organizar o Header */
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo{
+  position: relative;
+  max-width: 80px;
+}
+header.logo:houver {
+     filter: invert(0.1);
+}
+header ul{
+  position: relative;
+  display: flex; /* Põe os links em linha (menu) */
+}
+header ul li a {
+  list-style: none; /*Remove o estilo da lista (bolinha) */
+
+}
+header ul li a {
+  display: inline-block; /* Garante que o elemente seja renderizando em linha dentro dp bloco */
+  /* color: #333; */
+  color: var(--corSecundaria);
+  font: size 20px;
+  font-weight: 400;  
+  margin-left: 40px; /* Espaça os links entre si */
+  text-decoration: none; /*Rwemove o underline */
+  padding: 5px;
+}
+header ul li a:hover {
+  /*background-color:#017143; */
+  background-color: var(--corPrimaria);
+  /* color:#fff; */
+  color: var(--corTerciaria);
+  border-radius: 10px;
+}
+
+/*_______________________________________________________________________________________________*/
+/*conteúdo*/
+
+.conteudo{
+  position: relative;
+  width: 100%;
+  display: flex; /*Torna flexível o container do texto (.conteudo) */
+  justify-items: space-between;
+  align-items: center;
+}
+
+.conteudo .textoPrincipal h2 {
+  /* color:#017143; */
+  color: var(--corPrimaria);
+  font-size: 1.2em;
+  font-weight: 900;
+}
+
+.conteudo .textoPrincipal p {
+  /* color: #333; */
+  color: var(--corSecundaria)
+}
+
+/*Botão */
+.conteudo .textoPrincipal a {
+  display: inline-block;
+  margin-top: 20px; /* Afastemneto do parágrafo acima */
+  padding: 8px 20px;
+  /* background: #017143; */
+  background: var(--corPrimaria);
+  /* color: #fff; */
+  color: var(--corTerciaria)
+  border-radius: 40px;
+  font-weight: 500;
+  letter-spacing: 1px; /*Espaçamento entre as letras */
+  text-decoration:none;
+}
+/* Imagem sorvete */
+.conteudo .imgBox {
+  width: 600px;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 50px;
+  margin-top: 50px;
+}
+.conteudo .imgBox img {
+  max-width: 340;
+}
+ /*Imagem dos sorvetes pequenos abaixo*/
+ .sorvetes {
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  transform: translate(-50%);
+  display: flex;
+ }
+
+ .sorvetes li: :hover {
+  transform: translateY(-15px)
+
+ }
+
+  .sorvetes li img{
+    max-width: 60px;
+  }
+  /*Imagem das redes sociais*/
+  .sociais {
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .sociais li {
+    list-style: none;
+  }
+.sociais li a {
+  display: inline-block;
+  margin: 5px 0;
+  transform: scale(0.6); /* reduz o tamanho dos ícones*/
+  filter: invert(1); /*Inverte a cor para branco */
+}
+.sociais li a:hover {
+  /*color: #333; */
+  color: var(--corSecundaria);
+  filter: invert(0);
+
+}
+/*_________________________________________________________________________________________*/
+/*Círculo*/
+
+.circulo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100;
+  /*background: #017143; */
+  background: var(--corPrimaria);
+  /* https://bennettfeely.com/clippy/ */
+  /* https://www.w3schools.com/cssref/css3_pr_clip-path.php */
+
+
+  /*Tamanho -> Lado -> posição */
+  clip:-path: circule (600px at right 800px);
+}
+
+/*_______________________________________________________________________*/
+/*responsividade*/
+
+/*https://www.w3schools.com/howto/howto_css_media_query_breakpoints.asp */
+
+/*Small devices (portrait tablets and large phones, 600px and up) */
+/* Medium devices (landscape tablets, 768px and up) */
+/* large device (laptops/desktops, 992px and up) */
+/*Extra large devices (large laptops and desktops, 1200px and up) */
+
+/*Abaixo de 992px */
+@media (max-width:992px) {
+
+  heander {
+    padding: 20px;
+  }
+
+  header .logo {
+    max-width: 60px; /*Era 80px agora vira 60px (Reduz) */
+  }
+
+  header uI {
+    display: none; /*Esconde o menu abaixo de 992px */
+  }
+ 
+  /*Menu hamburguer*/
+  .toggle {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background: url(assets/menu.png); /*Imagem do hamburguer*/
+    background-size: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+
+  
+}

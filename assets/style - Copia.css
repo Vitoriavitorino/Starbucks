@@ -1,0 +1,98 @@
+/* importando a font Pooppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600&display=swap');
+
+/* __________________________________________________________________________________________________ */
+/* Reset (Básico) */
+
+
+  * {
+         margin: 0;
+        padding: 0;
+        box-sizing:border-box;
+        font-family: 'poppins', sans-serif;
+     
+    }
+       html{
+        /*Variaveís em CSS*/
+        --corPrimaria: 
+        --corSegundaria:
+        --corTerciaria:
+    }
+    /*main*/
+
+    main {
+        position: relative;
+        width: 100%;
+        min-height: 100vh; /*Altura de 1 tela (view height)*/
+        padding: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--corterciaria); /*chamada da variavel*/
+
+    }
+    /*____________________________________________________________________*/
+    /* Header */
+     header {
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 20px 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+     }
+      header.logo {
+       position: relative;
+       max-width: 80px;
+      }
+
+      header.logo:hover {
+       filter: invert(0.1); /*Controla o nível de contraste*/
+      }
+
+      header ul {
+        position: relative;
+        display: flex; /*põe os links em linha (menu)*/
+        list-style: none;
+      }
+      
+      /*______________________________________________________________________________________*/
+      /*conteúdo*/
+
+      .conteudo {
+       position: relative;
+       width: 100%;
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+      }
+      .conteudo .textoprincipal{
+        position: relative;
+        max-width: 600px; /*largura are do texto*/
+      }
+
+      .conteudo .textoprincipal h2 {
+        color: var(--corSegundaria);
+        font-size: 2.5em; /* 1em = 1 x tamanho fonte elemento (16px)*/
+        line-height: 1.2em; /*Espaçamento vertical*/
+        font-weight: 900;
+      }
+      .conteudo .textoprincipal p {
+        color: var(--corSegundaria)
+      }
+
+      /* botão */
+      .conteudo .textoprincipal a {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 8px 20px;
+        background: var(--corPrimaria);
+        color: var(--corterciaria);
+        border-radius: 40px;
+        font-weight: 600;
+        letter-spacing: 1px; /*Espaço entre os caracteres*/
+        text-decoration: none;
+      }
